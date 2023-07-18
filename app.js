@@ -61,9 +61,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(
-    "mongodb+srv://shreyash_28:fOmskZkeXj3a38zS@cluster0.nt9qqfo.mongodb.net/messaages"
-  )
+  .connect("your mongodb url to connect with mongodb")
   .then((result) => {
     const server = app.listen(8080);
     const io = require("./socket").init(server);
